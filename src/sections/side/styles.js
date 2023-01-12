@@ -9,6 +9,7 @@ export const ContainerSide = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  padding: 0;
 `;
 
 export const ProgrammerName = styled.h1`
@@ -25,7 +26,7 @@ export const OptionList = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 `;
 
 export const Option = styled.li`
@@ -34,10 +35,10 @@ export const Option = styled.li`
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 0.7rem 1.8rem;
-    font-size: 1.5rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.3rem;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.4s ease;
     cursor: pointer;
     color: #fff;
     transition: transform 0.3s;
@@ -53,7 +54,7 @@ export const Option = styled.li`
   a:hover {
     background-color: #fff;
     color: #08ad82;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 `;
 
