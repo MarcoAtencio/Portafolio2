@@ -63,7 +63,7 @@ export const Side = (props) => {
 };
 
 export const HamburgerMenu = () => {
-  const [isOpenMenu, setIsOpenMenu] = useState();
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
   const toggleMenu = () => {
     console.log('toggle');
     setIsOpenMenu(!isOpenMenu);
