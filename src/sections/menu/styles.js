@@ -1,5 +1,16 @@
 import styled, { css } from 'styled-components';
 
+export const ContainerMenu = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #08ad82;
+  box-shadow: 0 0 10px red;
+  z-index: 10;
+`;
+
 export const ContainerSide = styled.div`
   background-color: #08ad82;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);

@@ -9,7 +9,15 @@ export const Title = styled.h2`
 export const ContainerContactMe = styled.section`
   background-color: #fff;
   height: 100vh;
-  padding: 10rem;
+  padding: 9rem 4rem;
+
+  @media (min-width: 1200px) {
+    padding: 10rem 6rem;
+  }
+
+  @media (min-width: 1401px) {
+    padding: 10rem 8rem;
+  }
 `;
 
 export const Input = styled.input`

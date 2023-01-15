@@ -12,7 +12,7 @@ import file from '../../../assets/archives/CV-MarcoAtencio.pdf';
 
 const Presentation = () => {
   console.log('file', file);
-  const handleClick = () => {
+  const handleDownload = () => {
     const fileName = 'CV-MarcoAtencio.pdf';
     fetch(file)
       .then((response) => response.blob())
@@ -24,6 +24,13 @@ const Presentation = () => {
         a.click();
       })
       .catch((error) => console.log(error));
+  };
+
+  const handleContactMe = () => {
+    console.log('contact me');
+    const a = document.createElement('a');
+    a.href = '#contactMe';
+    a.click();
   };
 
   return (
@@ -39,8 +46,8 @@ const Presentation = () => {
       </PersonalInformation>
       <Role>Full Stack Developer</Role>
       <PortfolioActions>
-        <BtnDownloadCV onClick={handleClick}>Download CV</BtnDownloadCV>
-        <BtnContactMe>Contact Me</BtnContactMe>
+        <BtnDownloadCV onClick={handleDownload}>Download CV</BtnDownloadCV>
+        <BtnContactMe onClick={handleContactMe}>Contact Me</BtnContactMe>
       </PortfolioActions>
     </ContainerPresentation>
   );

@@ -38,6 +38,10 @@ p{
   }
 .app{
 }
+
+.no-scroll {
+  overflow: hidden;
+}
 `;
 
 export default GlobalStyle;
