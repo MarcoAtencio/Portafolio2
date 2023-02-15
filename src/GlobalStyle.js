@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+
 html {
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -42,6 +43,14 @@ p{
 .no-scroll {
   overflow: hidden;
 }
+
+.slick-slide div div {
+  display: flex !important;
+  justify-content: center ;
+}
+
+
+
 `;
 
 export default GlobalStyle;

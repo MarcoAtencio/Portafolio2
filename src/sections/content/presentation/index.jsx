@@ -3,6 +3,7 @@ import {
   PersonalInformation,
   GreetingsPrincipal,
   Role,
+  Photo,
   PortfolioActions,
   BtnDownloadCV,
   BtnContactMe,
@@ -34,17 +35,21 @@ const Presentation = () => {
   };
 
   return (
-    <ContainerPresentation id='presentation'>
-      <PersonalInformation>
-        <div>
+    <ContainerPresentation id='presentation' className='container-fluid'>
+      <PersonalInformation className='row'>
+        <div className='col-12 col-sm-6'>
           <GreetingsPrincipal>Hi</GreetingsPrincipal>
           <GreetingsPrincipal>I’m Marco</GreetingsPrincipal>
           <GreetingsPrincipal>Web Developer</GreetingsPrincipal>
+          <Role>Full Stack Developer</Role>
         </div>
-
-        <img src={ProgrammerImg} alt={'Foto de el programador Marco Atencio'} />
+        <Photo
+          src={ProgrammerImg}
+          alt={'Foto de el programador Marco Atencio'}
+          className='col-12 col-sm-6'
+        />
       </PersonalInformation>
-      <Role>Full Stack Developer</Role>
+
       <PortfolioActions>
         <BtnDownloadCV onClick={handleDownload}>Download CV</BtnDownloadCV>
         <BtnContactMe onClick={handleContactMe}>Contact Me</BtnContactMe>
@@ -52,5 +57,4 @@ const Presentation = () => {
     </ContainerPresentation>
   );
 };
-
 export default Presentation;

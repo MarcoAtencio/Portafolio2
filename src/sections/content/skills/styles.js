@@ -13,3 +13,8 @@ export const ContainerSkills = styled.section`
     padding: 10rem 8rem;
   }
 `;
+
+export const Title = styled.h2`
+  color: #08ad82;
+  font-size: 2.5rem;
+`;

@@ -1,23 +1,24 @@
 import {
   ContainerSide,
   ProgrammerName,
+  Role,
   NavPortfolio,
   OptionList,
   Option,
   NetworkInformation,
   ContainerMenu,
+  MenuTop,
+  MenuBottom,
+  MenuOptions,
+  MenuOption,
 } from './styles';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
 import { ReactComponent as GithubIcon } from '../../assets/img/github.svg';
 import { ReactComponent as LinkedinIcon } from '../../assets/img/linkedin.svg';
 import { ReactComponent as MenuIcon } from '../../assets/img/menu.svg';
 import { ReactComponent as CloseMenuIcon } from '../../assets/img/closeMenu.svg';
 import { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 
 export const Side = (props) => {
-  console.log('window dimensions', useWindowDimensions());
-
   return (
     <ContainerSide className='col-3 col-xl-2'>
       <ProgrammerName>Marco Atencio</ProgrammerName>
@@ -76,7 +77,7 @@ export const HamburgerMenu = () => {
   return (
     <>
       <MenuIcon
-        style={{ position: 'absolute', top: 40, right: 40 }}
+        style={{ position: 'fixed', top: 40, right: 40 }}
         onClick={toggleMenu}
       />
       {isOpenMenu && (
@@ -85,7 +86,58 @@ export const HamburgerMenu = () => {
             style={{ position: 'absolute', top: 40, right: 40 }}
             onClick={toggleMenu}
           />
-          <p>Prueba</p>
+          <MenuTop>
+            <ProgrammerName>Marco Atencio</ProgrammerName>
+            <Role>Full Stack Developer</Role>
+          </MenuTop>
+
+          <MenuOptions>
+            <MenuOption>
+              <a href='#presentation' onClick={toggleMenu}>
+                Home
+              </a>
+            </MenuOption>
+            <MenuOption>
+              <a href='#skills' onClick={toggleMenu}>
+                My Skills
+              </a>
+            </MenuOption>
+            <MenuOption>
+              <a href='#work' onClick={toggleMenu}>
+                Work
+              </a>
+            </MenuOption>
+            <MenuOption>
+              <a href='#education' onClick={toggleMenu}>
+                Education
+              </a>
+            </MenuOption>
+            <MenuOption>
+              <a href='#contactMe' onClick={toggleMenu}>
+                Contact Me
+              </a>
+            </MenuOption>
+          </MenuOptions>
+
+          <MenuBottom>
+            <NetworkInformation>
+              <a
+                href='https://github.com/MarcoAtencio'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <GithubIcon />
+              </a>
+
+              <a
+                href='https://www.linkedin.com/in/marcoatencio/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <LinkedinIcon />
+              </a>
+            </NetworkInformation>
+          </MenuBottom>
         </ContainerMenu>
       )}
     </>

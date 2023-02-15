@@ -1,8 +1,8 @@
-import { ContainerWork } from './styles';
+import { ContainerWork, Title } from './styles';
 
 const Work = (props) => (
   <ContainerWork id='work'>
-    <h1>Work</h1>
+    <Title>Work</Title>
   </ContainerWork>
 );
 

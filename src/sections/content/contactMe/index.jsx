@@ -32,23 +32,28 @@ const ContactMe = () => {
     <ContainerContactMe id='contactMe'>
       <Title>Contact Me</Title>
       <form className='container-fluid text-center' onSubmit={sendMessage}>
-        <div className='row mt-3'>
+        <div className='row mt-3 justify-content-between'>
           <Input
             type='text'
             placeholder='Name'
-            className='col'
+            className='col-12 col-md-6 top'
             name='user_name'
           />
           <Input
             type='email'
             placeholder='Email'
-            className='col'
+            className='col-12 col-md-6 mt-3 top'
             name='user_email'
           />
         </div>
 
         <div className='row mt-3'>
-          <Input type='text' placeholder='Subject' name='message_subject' />
+          <Input
+            type='text'
+            placeholder='Subject'
+            name='message_subject'
+            className='col-12'
+          />
         </div>
         <div className='row mt-3'>
           <TextArea

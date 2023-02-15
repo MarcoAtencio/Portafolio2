@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Title = styled.h2`
   color: #08ad82;
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
 `;
 
 export const ContainerContactMe = styled.section`
@@ -29,8 +29,16 @@ export const Input = styled.input`
     border: 2px solid #08ad82;
     outline: none;
   }
-  &:nth-child(1) {
-    margin-right: 30px;
+  &.top:nth-child(1) {
+    @media screen and (min-width: 768px) {
+      width: 48%;
+    }
+  }
+  &.top:nth-child(2) {
+    @media screen and (min-width: 768px) {
+      width: 48%;
+      margin-top: 0 !important;
+    }
   }
 `;
 

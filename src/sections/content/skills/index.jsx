@@ -1,8 +1,8 @@
-import { ContainerSkills } from './styles';
+import { ContainerSkills,Title } from './styles';
 
 const Skills = () => (
   <ContainerSkills id='skills'>
-    <h1>Skills</h1>
+    <Title>Skills</Title>
   </ContainerSkills>
 );
 

@@ -2,33 +2,66 @@ import styled from 'styled-components';
 
 export const ContainerPresentation = styled.section`
   background-color: #fff;
-  height: 100vh;
-  padding: 9rem 4rem;
+  padding: 12vw 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 
-  @media (min-width: 1200px) {
-    padding: 10rem 6rem;
-  }
-
-  @media (min-width: 1401px) {
-    padding: 10rem 8rem;
+  @media screen and (min-width: 960px) {
+    padding: 12vw 8vw;
+    display: block;
   }
 `;
 
 export const PersonalInformation = styled.div`
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
+  @media screen and (min-width: 576px) {
+    flex-direction: row;
+  }
 `;
 
 export const GreetingsPrincipal = styled.h1`
   color: #08ad82;
-  font-size: 4rem;
+  font-size: 2.3rem;
+
+  @media screen and (min-width: 576px) {
+    font-size: 3rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 3.5rem;
+  }
+
+  @media screen and (min-width: 960px) {
+    font-size: 4rem;
+  }
 `;
 
 export const Role = styled.p`
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   color: #5b5b5b;
   font-size: 1.5rem;
+  font-weight: 400;
+`;
+
+export const Photo = styled.img`
+  max-width: 250px;
+  margin: auto;
+  margin-bottom: 0.5rem;
+
+  @media screen and (min-width: 576px) {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 2rem;
+    max-width: 350px;
+  }
 `;
 
 export const PortfolioActions = styled.div`
@@ -36,6 +69,13 @@ export const PortfolioActions = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 576px) {
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 `;
 
 export const BtnDownloadCV = styled.button`
@@ -50,6 +90,10 @@ export const BtnDownloadCV = styled.button`
   transition: transform 0.3s;
   &:hover {
     transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 576px) {
+    margin: 0;
   }
 `;
 

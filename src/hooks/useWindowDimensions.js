@@ -1,31 +1,24 @@
 import { useState, useEffect } from 'react';
 
 export default function useWindowDimensions() {
-  const hasWindow = typeof window !== 'undefined';
-
-  function getWindowDimensions() {
-    const width = hasWindow ? window.innerWidth : null;
-    const height = hasWindow ? window.innerHeight : null;
-    return {
-      width,
-      height,
-    };
-  }
-
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
+  const [windowDimensions, setWindowDimensions] = useState({
+    width: typeof window === 'object' ? window.innerWidth : undefined,
+    height: typeof window === 'object' ? window.innerHeight : undefined,
+  });
 
   useEffect(() => {
-    if (hasWindow) {
-      const handleResize = () => {
-        setWindowDimensions(getWindowDimensions());
-      };
+    function handleResize() {
+      setWindowDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
 
+    if (typeof window === 'object') {
       window.addEventListener('resize', handleResize);
       return () => window.removeEventListener('resize', handleResize);
     }
-  }, [hasWindow]);
+  }, []);
 
-  return windowDimensions.width > 850 ? 'desktop' : 'tablet';
+  return windowDimensions.width >= 992 ? 'desktop' : 'tablet';
 }
